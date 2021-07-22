@@ -5,6 +5,7 @@ typedef long long int ll;
 
 int main()
 {
+    
     string a, b = "hello";
     cin >> a;
     int n = a.length();
