@@ -1,38 +1,27 @@
+//Author: Debopriya Deb Roy
+
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long int ll;
-
 int main()
 {
-    ll t, c1, c2;
+    int t,n;
     cin >> t;
-    vector<ll> a;
-    for (int i = 0; i < t; i++)
-    {
-        ll x;
-        cin >> x;
-        a.push_back(x);
-    }
-    for (int i = 0; i < t; i++)
-    {
-        ll x = a[i];
-        if (x % 3 == 0)
-        {
-            c1 = x / 3;
-            c2 = c1;
+    
+    for(int i = 0; i < t; i++){
+        cin >> n;
+        vector<int> v;
+        float res = 0;
+        for(int j = 0; j<n; j++){
+            cin >> v[j];
         }
-        else if (x % 3 == 1)
-        {
-            c2 = x / 3;
-            c1 = c2 + 1;
+        sort(v.begin(),v.end());
+        for(int i = 0; i <(n-2); i++){
+            res += v[i];
         }
-        else
-        {
-            c1 = x / 3;
-            c2 = c1 + 1;
-        }
-        cout << c1 << " " << c2<< "\n";
+        res/= (n-2);
+        res += v[n-1];
+        
+        cout << res << endl;
     }
 
     return 0;
