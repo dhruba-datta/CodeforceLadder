@@ -3,12 +3,23 @@ using namespace std;
 
 typedef long long int ll;
 
-#define vi vector<lli>
+#define vi vector<ll>
 #define pb push_back
 
 void solve()
 {
-    cout<<"anjan";
+    vi a;
+    a.pb(4);
+    a.pb(5);
+    a.pb(6);
+    a.pb(1);
+    sort(a.begin(),a.end());
+    for (int i = 0; i < a.size(); i++)
+    {
+       cout<<a[i]<<" ";
+    }
+    
+
 }
 
 int main()
